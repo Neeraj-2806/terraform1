@@ -4,6 +4,7 @@ variable "ingress_ports" {
     default = [22, 80, 443]
   
 }
+/*
 variable "instances" {
     type = map(string)
     default = {
@@ -13,3 +14,4 @@ variable "instances" {
     }
   
 }
+*/

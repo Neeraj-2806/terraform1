@@ -12,24 +12,36 @@ resource "aws_subnet" "public_subnet" {
     map_public_ip_on_launch = true
     availability_zone = "ap-south-1a"
     cidr_block = var.public_subnet_cidr  
+    tags = {
+        Name = "public-subnet1"
+    }
 }
 resource "aws_subnet" "private_subnet" {
     vpc_id = aws_vpc.first-vpc.id
     map_public_ip_on_launch = false 
     availability_zone = "ap-south-1a"
-    cidr_block = var.private_subnet_cidr  
+    cidr_block = var.private_subnet_cidr
+    tags = {
+        Name = "private-subnet1"
+    }  
 }
 resource "aws_subnet" "public_subnet2" {
     vpc_id = aws_vpc.first-vpc.id
     map_public_ip_on_launch = true
     availability_zone = "ap-south-1b"
     cidr_block = var.public_subnet_cidr2  
+    tags = {
+        Name = "public-subnet2"
+    }
 }
 resource "aws_subnet" "private_subnet2" {
     vpc_id = aws_vpc.first-vpc.id
     map_public_ip_on_launch = false 
     availability_zone = "ap-south-1b"
     cidr_block = var.private_subnet_cidr2  
+    tags = {
+        Name = "private-subnet2"
+    }
 }
 
 

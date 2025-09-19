@@ -1,4 +1,4 @@
-resource "aws_instance" "first_ec2" {
+/*resource "aws_instance" "first_ec2" {
     ami = "ami-02d26659fd82cf299"
     instance_type = "t3.micro"
     key_name = aws_key_pair.first_key.key_name
@@ -12,7 +12,7 @@ resource "aws_instance" "first_ec2" {
         Name = "first_machine-${terraform.workspace}"
     }
 }
-
+*/
 resource "aws_security_group" "first_sg" {
     name = "first_sg-${terraform.workspace}"
     vpc_id = aws_vpc.first-vpc.id
