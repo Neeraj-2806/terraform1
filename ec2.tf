@@ -39,7 +39,7 @@ resource "tls_private_key" "first" {
     rsa_bits = 4096
 }
 resource "aws_key_pair" "first_key" {
-    key_name = "first_key"
+    key_name = "first-key"
     public_key = tls_private_key.first.public_key_openssh
   
 }
