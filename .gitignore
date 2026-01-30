@@ -1,5 +1,20 @@
-policies1.tf
-.terraform/
-.terraform.lock.hcl
+# Terraform state files
 *.tfstate
 *.tfstate.backup
+
+# Terraform directories
+.terraform/
+
+# Crash logs
+crash.log
+
+# CLI config files
+terraform.tfvars      # contains sensitive values (like access keys, passwords)
+override.tf           # local overrides
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Optional: ignore plan files
+*.tfplan
+
